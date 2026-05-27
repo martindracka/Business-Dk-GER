@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "workspaces": [
+    "business-dkde"
+  ],
+  "scripts": {
+    "dev": "npm --prefix business-dkde run dev",
+    "build": "npm --prefix business-dkde run build",
+    "preview": "npm --prefix business-dkde run preview"
+  }
+}
