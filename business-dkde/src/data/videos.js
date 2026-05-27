@@ -1,81 +1,109 @@
 export const videos = [
   {
     id: 1,
-    youtubeId: 'n3TRnWy4CF4',
-    title: 'Grenzüberschreitende Zusammenarbeit in der Praxis',
-    author: 'Business-region',
-    company: 'Business DE-DK',
-    duration: '',
-    topic: 'Cross-border',
-    date: '2025-05-01',
-    thumbnail: 'https://i.ytimg.com/vi/n3TRnWy4CF4/hqdefault.jpg'
+    youtubeId: "n3TRnWy4CF4",
+    title: {
+      en: "Cross-border cooperation in practice",
+      de: "Grenzüberschreitende Zusammenarbeit in der Praxis",
+      da: "Grænseoverskridende samarbejde i praksis"
+    },
+    author: "Business-region",
+    company: "Business DE-DK",
+    duration: "",
+    topic: "Cross-border",
+    date: "2025-05-01",
+    thumbnail: "https://i.ytimg.com/vi/n3TRnWy4CF4/hqdefault.jpg"
   },
   {
     id: 2,
-    youtubeId: 'a11VoY2aQfY',
-    title: 'Når onboarding bliver helhed: Tryghed for internationale medarbejdere',
-    author: 'Business-region',
-    company: 'Business DE-DK',
-    duration: '',
-    topic: 'Labour Market',
-    date: '2025-04-10',
-    thumbnail: 'https://i.ytimg.com/vi/a11VoY2aQfY/hqdefault.jpg'
+    youtubeId: "a11VoY2aQfY",
+    title: {
+      en: "When onboarding becomes holistic: security for international employees",
+      de: "Wenn Onboarding ganzheitlich wird: Sicherheit für internationale Mitarbeitende",
+      da: "Når onboarding bliver helhedsorienteret: Tryghed for internationale medarbejdere"
+    },
+    author: "Business-region",
+    company: "Business DE-DK",
+    duration: "",
+    topic: "Labour Market",
+    date: "2025-04-10",
+    thumbnail: "https://i.ytimg.com/vi/a11VoY2aQfY/hqdefault.jpg"
   },
   {
     id: 3,
-    youtubeId: 'JpbeawD-O2Q',
-    title: 'Hvordan Industri- og Handelskammeret Støtter Dansk-Tysk Erhvervssamarbejde',
-    author: 'Business-region',
-    company: 'Business DE-DK',
-    duration: '',
-    topic: 'Business',
-    date: '2025-03-28',
-    thumbnail: 'https://i.ytimg.com/vi/JpbeawD-O2Q/hqdefault.jpg'
+    youtubeId: "JpbeawD-O2Q",
+    title: {
+      en: "How the Chamber of Commerce supports Danish-German business cooperation",
+      de: "Wie die Industrie- und Handelskammer die deutsch-dänische Unternehmenszusammenarbeit unterstützt",
+      da: "Hvordan Industri- og Handelskammeret støtter dansk-tysk erhvervssamarbejde"
+    },
+    author: "Business-region",
+    company: "Business DE-DK",
+    duration: "",
+    topic: "Business",
+    date: "2025-03-28",
+    thumbnail: "https://i.ytimg.com/vi/JpbeawD-O2Q/hqdefault.jpg"
   },
   {
     id: 4,
-    youtubeId: 'hnbAzHQNnik',
-    title: 'Workplace Integration – Working Abroad as a Trainer',
-    author: 'Business-region',
-    company: 'Business DE-DK',
-    duration: '',
-    topic: 'Labour Market',
-    date: '2025-03-15',
-    thumbnail: 'https://i.ytimg.com/vi/hnbAzHQNnik/hqdefault.jpg'
+    youtubeId: "hnbAzHQNnik",
+    title: {
+      en: "Workplace integration – working abroad as a trainer",
+      de: "Integration am Arbeitsplatz – im Ausland als Trainer arbeiten",
+      da: "Integration på arbejdspladsen – at arbejde i udlandet som træner"
+    },
+    author: "Business-region",
+    company: "Business DE-DK",
+    duration: "",
+    topic: "Labour Market",
+    date: "2025-03-15",
+    thumbnail: "https://i.ytimg.com/vi/hnbAzHQNnik/hqdefault.jpg"
   },
   {
     id: 5,
-    youtubeId: 'ZxtI77di304',
-    title: 'Derfor er det svært at rekruttere international arbejdskraft – og hvad du kan gøre ved det',
-    author: 'Business-region',
-    company: 'Business DE-DK',
-    duration: '',
-    topic: 'Labour Market',
-    date: '2025-02-20',
-    thumbnail: 'https://i.ytimg.com/vi/ZxtI77di304/hqdefault.jpg'
+    youtubeId: "ZxtI77di304",
+    title: {
+      en: "Why recruiting international labour is difficult – and what you can do about it",
+      de: "Warum internationale Fachkräfte schwer zu rekrutieren sind – und was Sie dagegen tun können",
+      da: "Derfor er det svært at rekruttere international arbejdskraft – og hvad du kan gøre ved det"
+    },
+    author: "Business-region",
+    company: "Business DE-DK",
+    duration: "",
+    topic: "Labour Market",
+    date: "2025-02-20",
+    thumbnail: "https://i.ytimg.com/vi/ZxtI77di304/hqdefault.jpg"
   },
   {
     id: 6,
-    youtubeId: 's98OJeTzgVM',
-    title: 'Grenzüberschreitende Lösungen für den Arbeitskräftemangel – Dialog in Eutin',
-    author: 'Business-region',
-    company: 'Business DE-DK',
-    duration: '',
-    topic: 'Cross-border',
-    date: '2025-02-05',
-    thumbnail: 'https://i.ytimg.com/vi/s98OJeTzgVM/hqdefault.jpg'
+    youtubeId: "s98OJeTzgVM",
+    title: {
+      en: "Cross-border solutions for the labour shortage – dialogue in Eutin",
+      de: "Grenzüberschreitende Lösungen für den Arbeitskräftemangel – Dialog in Eutin",
+      da: "Grænseoverskridende løsninger på manglen på arbejdskraft – dialog i Eutin"
+    },
+    author: "Business-region",
+    company: "Business DE-DK",
+    duration: "",
+    topic: "Cross-border",
+    date: "2025-02-05",
+    thumbnail: "https://i.ytimg.com/vi/s98OJeTzgVM/hqdefault.jpg"
   },
   {
     id: 7,
-    youtubeId: 'lpEReNTKuus',
-    title: 'Styrkelse af grænseoverskridende samarbejde for økonomisk vækst',
-    author: 'Business-region',
-    company: 'Business DE-DK',
-    duration: '',
-    topic: 'Cross-border',
-    date: '2025-01-22',
-    thumbnail: 'https://i.ytimg.com/vi/lpEReNTKuus/hqdefault.jpg'
+    youtubeId: "lpEReNTKuus",
+    title: {
+      en: "Strengthening cross-border cooperation for economic growth",
+      de: "Stärkung der grenzüberschreitenden Zusammenarbeit für wirtschaftliches Wachstum",
+      da: "Styrkelse af grænseoverskridende samarbejde for økonomisk vækst"
+    },
+    author: "Business-region",
+    company: "Business DE-DK",
+    duration: "",
+    topic: "Cross-border",
+    date: "2025-01-22",
+    thumbnail: "https://i.ytimg.com/vi/lpEReNTKuus/hqdefault.jpg"
   }
-]
+];
 
-export const videoTopics = ['All', 'Cross-border', 'Labour Market', 'Business']
+export const videoTopics = ["All", "Cross-border", "Labour Market", "Business"];
