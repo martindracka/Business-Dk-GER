@@ -2,9 +2,9 @@
   <div>
     <div class="page-hero">
       <div class="container">
-        <span class="page-hero-label">Contact</span>
-        <h1>Get in Touch</h1>
-        <p>We'd love to hear from you. Reach out with questions, ideas, or partnership opportunities.</p>
+        <span class="page-hero-label">{{ $t('contact.label') }}</span>
+        <h1>{{ $t('contact.title') }}</h1>
+        <p>{{ $t('contact.intro') }}</p>
       </div>
     </div>
 
@@ -15,60 +15,60 @@
           <div class="info-block">
             <span class="info-icon">📍</span>
             <div>
-              <h4>Address</h4>
-              <p>Vestergade 9<br>6270 Tønder, Denmark</p>
+              <h4>{{ $t('contact.address') }}</h4>
+              <p>{{ $t('contact.address_street') }}<br>{{ $t('contact.address_city') }}</p>
             </div>
           </div>
           <div class="info-block">
             <span class="info-icon">📞</span>
             <div>
-              <h4>Phone</h4>
-              <a href="tel:+4521775916">+45 21 77 59 16</a>
+              <h4>{{ $t('contact.phone') }}</h4>
+              <a :href="`tel:${$t('contact.phone_number').replace(/\\s/g, '')}`">{{ $t('contact.phone_number') }}</a>
             </div>
           </div>
           <div class="info-block">
             <span class="info-icon">✉️</span>
             <div>
-              <h4>Email</h4>
-              <a href="mailto:info@business-region.eu">info@business-region.eu</a>
+              <h4>{{ $t('contact.email') }}</h4>
+              <a :href="`mailto:${$t('contact.email_address')}`">{{ $t('contact.email_address') }}</a>
             </div>
           </div>
           <div class="info-block">
             <span class="info-icon">🕐</span>
             <div>
-              <h4>Office Hours</h4>
-              <p>Mon – Thu: 8:30 – 15:00</p>
-              <p>Friday: 8:30 – 13:00</p>
-              <p class="note">Visits by appointment only</p>
+              <h4>{{ $t('contact.hours') }}</h4>
+              <p>{{ $t('contact.hours_weekdays') }}</p>
+              <p>{{ $t('contact.hours_friday') }}</p>
+              <p class="note">{{ $t('contact.hours_note') }}</p>
             </div>
           </div>
         </aside>
 
         <!-- Form -->
         <div class="contact-form-col">
-          <h2 style="margin-bottom:1.5rem;font-size:1.3rem;">Send a Message</h2>
+          <h2 style="margin-bottom:1.5rem;font-size:1.3rem;">{{ $t('contact.form_heading') }}</h2>
           <form @submit.prevent="submitForm" v-if="!sent">
             <div class="form-group">
-              <label>Your Name</label>
+              <label>{{ $t('contact.form_name') }}</label>
               <input v-model="form.name" type="text" required />
             </div>
             <div class="form-group">
-              <label>Your Email</label>
+              <label>{{ $t('contact.form_email') }}</label>
               <input v-model="form.email" type="email" required />
             </div>
             <div class="form-group">
-              <label>Subject</label>
+              <label>{{ $t('contact.form_subject') }}</label>
               <input v-model="form.subject" type="text" required />
             </div>
             <div class="form-group">
-              <label>Message</label>
+              <label>{{ $t('contact.form_message') }}</label>
               <textarea v-model="form.message" required></textarea>
             </div>
-            <button type="submit" class="btn btn-dark" style="width:100%">Send Message</button>
+            <button type="submit" class="btn btn-dark" style="width:100%">{{ $t('contact.form_submit') }}</button>
           </form>
           <div v-else class="success-msg">
-            <div class="success-icon">✓</div>
-            <p>Your message has been sent. We'll get back to you soon!</p>
+            <div class="success-icon">{{ $t('contact.success_icon') }}</div>
+            <p>{{ $t('contact.success_text') }}</p>
           </div>
         </div>
       </div>

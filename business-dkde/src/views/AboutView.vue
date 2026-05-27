@@ -3,9 +3,9 @@
     <!-- Hero -->
     <div class="page-hero">
       <div class="container">
-        <span class="page-hero-label">About</span>
-        <h1>Expand Your Business<br>Across the Border</h1>
-        <p style="max-width:540px;margin-top:1rem">Are you looking for the right business partners in the Danish-German border region? Business-region helps companies find new business opportunities, build networks and create growth. Experience the benefits of stronger business collaboration – contact us today.</p>
+        <span class="page-hero-label">{{ $t('about.label') }}</span>
+        <h1>{{ $t('about.title') }}</h1>
+        <p style="max-width:540px;margin-top:1rem">{{ $t('about.intro') }}</p>
       </div>
     </div>
 
@@ -13,15 +13,15 @@
     <section class="section">
       <div class="container mission-layout">
         <div class="mission-text" v-reveal>
-          <p class="section-label">Our Mission</p>
-          <h2>Strengthening cross-border business collaboration</h2>
-          <p style="margin-top:1.25rem">Are you looking for the right partners in the Danish-German border region? Business DE-DK helps companies find new business opportunities, build networks and create growth — across the border.</p>
-          <p style="margin-top:0.9rem">We strengthen business collaboration in the border region. We help companies find the right partners, gain access to relevant business information and create growth opportunities on both sides of the border.</p>
+          <p class="section-label">{{ $t('about.mission_label') }}</p>
+          <h2>{{ $t('about.mission_title') }}</h2>
+          <p style="margin-top:1.25rem">{{ $t('about.mission_text') }}</p>
+          <p style="margin-top:0.9rem">{{ $t('about.mission_text2') }}</p>
         </div>
         <div class="stats-card" ref="statsCardRef" v-reveal="120">
           <div class="stat-item" v-for="s in statsDisplay" :key="s.label">
             <span class="stat-big">{{ s.value }}<span class="stat-suffix">{{ s.suffix }}</span></span>
-            <span class="stat-sub">{{ s.label }}</span>
+            <span class="stat-sub">{{ $t('about.stats_' + s.labelKey) }}</span>
           </div>
         </div>
       </div>
@@ -30,14 +30,14 @@
     <!-- What We Do -->
     <section class="section" style="background:var(--grey-50)">
       <div class="container">
-        <p class="section-label" v-reveal>What We Do</p>
-        <h2 style="margin-bottom:2.5rem" v-reveal="60">Six Strategic Focus Areas</h2>
+        <p class="section-label" v-reveal>{{ $t('about.focus_label') }}</p>
+        <h2 style="margin-bottom:2.5rem" v-reveal="60">{{ $t('about.focus_title') }}</h2>
         <div class="focus-grid">
           <div class="focus-item" v-for="(area, i) in focusAreas" :key="area.title" v-reveal="i * 70">
             <div class="focus-num">{{ area.num }}</div>
             <div>
-              <h4>{{ area.title }}</h4>
-              <p>{{ area.desc }}</p>
+              <h4>{{ $t(area.titleKey) }}</h4>
+              <p>{{ $t(area.descKey) }}</p>
             </div>
           </div>
         </div>
@@ -55,8 +55,8 @@
         </div>
         <div class="vision-card" v-reveal="120">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
-          <p style="color:var(--white);font-size:1.05rem;line-height:1.75;margin-top:1.25rem;font-style:italic">"A thriving, integrated cross-border economy where businesses, talent, and innovation flow freely across the Germany–Denmark border."</p>
-          <span style="display:block;margin-top:1.25rem;font-size:0.78rem;color:rgba(255,255,255,0.4);letter-spacing:0.08em;text-transform:uppercase">Our Vision</span>
+          <p style="color:var(--white);font-size:1.05rem;line-height:1.75;margin-top:1.25rem;font-style:italic">"{{ $t('about.vision_text') }}"</p>
+          <span style="display:block;margin-top:1.25rem;font-size:0.78rem;color:rgba(255,255,255,0.4);letter-spacing:0.08em;text-transform:uppercase">{{ $t('about.vision_title') }}</span>
         </div>
       </div>
     </section>
@@ -81,9 +81,9 @@
     <section class="section">
       <div class="container funding-row">
         <div v-reveal>
-          <p class="section-label">Funding & Partners</p>
-          <h2>Interreg Deutschland-Danmark</h2>
-          <p style="margin-top:1rem;max-width:500px">Business DE-DK is co-funded by the European Regional Development Fund through the Interreg Deutschland-Danmark programme.</p>
+          <p class="section-label">{{ $t('about.funding_label') }}</p>
+          <h2>{{ $t('about.funding_title') }}</h2>
+          <p style="margin-top:1rem;max-width:500px">{{ $t('about.funding_text') }}</p>
         </div>
         <div class="funding-badges" v-reveal="120">
           <div class="funding-badge"><span>🇪🇺</span><p>European Regional<br>Development Fund</p></div>
@@ -96,8 +96,10 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
 
+const { t } = useI18n()
 const statsCardRef = ref(null)
 
 const team = [
@@ -107,19 +109,19 @@ const team = [
 ]
 
 const focusAreas = [
-  { num: '01', title: 'Data & Insight',    desc: 'Mapping regional opportunities and needs through research and analysis.' },
-  { num: '02', title: 'Networking',        desc: 'Establishing cross-border business networks connecting professionals.' },
-  { num: '03', title: 'Visibility',        desc: 'Sharing knowledge and stories through our media channels.' },
-  { num: '04', title: 'Business Council',  desc: 'Exploring cross-border advisory governance potential.' },
-  { num: '05', title: 'Talent & Growth',   desc: 'Attracting and retaining regional talent across the border.' },
-  { num: '06', title: 'Development',       desc: 'Facilitating cross-border economic advancement and innovation.' },
+  { num: '01', titleKey: 'home.focus.data_title',        descKey: 'home.focus.data_desc' },
+  { num: '02', titleKey: 'home.focus.network_title',     descKey: 'home.focus.network_desc' },
+  { num: '03', titleKey: 'home.focus.visibility_title',  descKey: 'home.focus.visibility_desc' },
+  { num: '04', titleKey: 'home.focus.council_title',     descKey: 'home.focus.council_desc' },
+  { num: '05', titleKey: 'home.focus.talent_title',      descKey: 'home.focus.talent_desc' },
+  { num: '06', titleKey: 'home.focus.development_title', descKey: 'home.focus.development_desc' },
 ]
 
 const statsData = [
-  { target: 3,   suffix: '',  label: 'Countries' },
-  { target: 240, suffix: '+', label: 'Members' },
-  { target: 18,  suffix: '',  label: 'Sectors' },
-  { target: 10,  suffix: '+', label: 'Years active' },
+  { target: 3,   suffix: '',  label: 'Countries', labelKey: 'countries' },
+  { target: 240, suffix: '+', label: 'Members', labelKey: 'members' },
+  { target: 18,  suffix: '',  label: 'Sectors', labelKey: 'sectors' },
+  { target: 10,  suffix: '+', label: 'Years active', labelKey: 'years' },
 ]
 
 const statsDisplay = ref(statsData.map(s => ({ ...s, value: 0 })))
@@ -174,7 +176,7 @@ onMounted(() => {
   align-self: start;
   min-width: 280px;
 }
-.stat-item {}
+
 .stat-big {
   display: block;
   font-size: 2rem;

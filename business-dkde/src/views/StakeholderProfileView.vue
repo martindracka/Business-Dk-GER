@@ -2,7 +2,7 @@
   <div v-if="member">
     <div class="page-hero">
       <div class="container">
-        <RouterLink to="/network" class="back-link">← Back to Network</RouterLink>
+        <RouterLink to="/network" class="back-link">{{ $t('stakeholder.back_link') }}</RouterLink>
         <div class="profile-hero-inner">
           <div class="profile-avatar-lg">{{ member.initials }}</div>
           <div>
@@ -10,7 +10,7 @@
               <h1 style="font-size:2rem;">{{ member.name }}</h1>
               <span :class="['badge-country', member.country === 'DE' ? 'badge-de' : 'badge-dk']">{{ member.country }}</span>
             </div>
-            <p class="profile-role">{{ member.role }}</p>
+            <p class="profile-role">{{ localized(member.role) }}</p>
             <p class="profile-company">{{ member.company }}</p>
           </div>
         </div>
@@ -20,25 +20,25 @@
     <section class="section">
       <div class="container profile-layout">
         <div>
-          <h2 style="font-size:1.25rem;margin-bottom:1rem;">About</h2>
-          <p style="color:var(--text-muted);line-height:1.8;font-size:0.96rem;">{{ member.bio }}</p>
-          <span class="tag" style="margin-top:1.25rem;display:inline-block;">{{ member.sector }}</span>
+          <h2 style="font-size:1.25rem;margin-bottom:1rem;">{{ $t('stakeholder.about') }}</h2>
+          <p style="color:var(--text-muted);line-height:1.8;font-size:0.96rem;">{{ localized(member.bio) }}</p>
+          <span class="tag" style="margin-top:1.25rem;display:inline-block;">{{ catLabel(member.sector) }}</span>
         </div>
         <aside>
           <div class="profile-info-card">
             <div class="info-row">
-              <span class="info-label">Sector</span>
-              <span>{{ member.sector }}</span>
+              <span class="info-label">{{ $t('stakeholder.sector') }}</span>
+              <span>{{ catLabel(member.sector) }}</span>
             </div>
             <div class="info-row">
-              <span class="info-label">Country</span>
-              <span>{{ member.country === 'DE' ? '🇩🇪 Germany' : '🇩🇰 Denmark' }}</span>
+              <span class="info-label">{{ $t('stakeholder.country') }}</span>
+              <span>{{ member.country === 'DE' ? $t('stakeholder.country_de') : $t('stakeholder.country_dk') }}</span>
             </div>
             <div class="info-row">
-              <span class="info-label">Company</span>
+              <span class="info-label">{{ $t('stakeholder.company') }}</span>
               <span>{{ member.company }}</span>
             </div>
-            <RouterLink to="/contact" class="btn btn-dark" style="width:100%;text-align:center;margin-top:1rem;display:block;">Get in Touch</RouterLink>
+            <RouterLink to="/contact" class="btn btn-dark" style="width:100%;text-align:center;margin-top:1rem;display:block;">{{ $t('stakeholder.contact_btn') }}</RouterLink>
           </div>
         </aside>
       </div>
@@ -47,19 +47,30 @@
 
   <div v-else class="section">
     <div class="container" style="text-align:center;padding:4rem 0">
-      <h2>Member not found</h2>
-      <RouterLink to="/network" class="btn btn-dark" style="margin-top:1.5rem;display:inline-flex">← Back to Network</RouterLink>
+      <h2>{{ $t('stakeholder.not_found') }}</h2>
+      <RouterLink to="/network" class="btn btn-dark" style="margin-top:1.5rem;display:inline-flex">{{ $t('stakeholder.back_link') }}</RouterLink>
     </div>
   </div>
 </template>
 
 <script setup>
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 import { members } from '../data/members.js'
 
+const { t, locale } = useI18n()
 const route = useRoute()
 const member = computed(() => members.find(m => m.id === Number(route.params.id)))
+
+function localized(value) {
+  if (typeof value === 'string') return value
+  return value?.[locale.value] || value?.en || ''
+}
+
+function catLabel(v) {
+  return t('categories.' + v.toLowerCase().replace(/[\s-]+/g, '_'))
+}
 </script>
 
 <style scoped>

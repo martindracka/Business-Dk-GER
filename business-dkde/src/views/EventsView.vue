@@ -3,68 +3,81 @@
     <div class="page-hero">
       <div class="container page-hero-inner">
         <div>
-          <span class="page-hero-label">Events</span>
-          <h1>Events</h1>
-          <p>Cross-border forums, workshops and networking events across the DE-DK region.</p>
+          <span class="page-hero-label">{{ $t('events.label') }}</span>
+          <h1>{{ $t('events.title') }}</h1>
+          <p>{{ $t('events.intro') }}</p>
         </div>
         <div class="hero-stat-card single">
           <span class="stat-num">{{ events.length }}</span>
-          <span class="stat-label">Events</span>
+          <span class="stat-label">{{ $t('events.stats') }}</span>
         </div>
       </div>
     </div>
-
+ 
     <!-- Filters -->
     <div class="container">
       <div class="filter-bar" style="justify-content:space-between;">
         <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;">
-          <button v-for="type in eventTypes" :key="type" :class="['pill', activeType === type ? 'active' : '']" @click="activeType = type">{{ type }}</button>
+          <button v-for="type in eventTypes" :key="type" :class="['pill', activeType === type ? 'active' : '']" @click="activeType = type">{{ catLabel(type) }}</button>
         </div>
         <select class="sort-select" v-model="sort">
-          <option value="latest">Latest</option>
-          <option value="oldest">Oldest</option>
+          <option value="latest">{{ $t('events.sort_latest') }}</option>
+          <option value="oldest">{{ $t('events.sort_oldest') }}</option>
         </select>
       </div>
     </div>
-
+ 
     <!-- Event cards (dark) -->
     <div class="container events-grid-wrap">
       <div class="events-grid">
         <div v-for="ev in filtered" :key="ev.id" class="event-card">
           <div class="event-header">
             <div class="event-date">
-              <span class="event-month">{{ ev.monthShort }}</span>
+              <span class="event-month">{{ localized(ev.monthShort) }}</span>
               <span class="event-day">{{ ev.day }}</span>
             </div>
-            <span class="event-type-badge">{{ ev.type }}</span>
+            <span class="event-type-badge">{{ catLabel(ev.type) }}</span>
           </div>
-          <h3 class="event-title">{{ ev.title }}</h3>
+          <h3 class="event-title">{{ localized(ev.title) }}</h3>
           <p class="event-location">
             <span class="location-dot"></span>
             {{ ev.location }}
           </p>
           <div class="event-footer">
-            <RouterLink to="/contact" class="register-link">Register →</RouterLink>
+            <RouterLink to="/contact" class="register-link">{{ $t('events.register') }}</RouterLink>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-
+ 
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { events, eventTypes } from '../data/events.js'
-
+ 
+const { t, locale } = useI18n()
 const activeType = ref('All')
 const sort = ref('latest')
+ 
+// Maps a raw data value (e.g. "Public Sector") to its translated label.
+// The pill click-value stays the raw English so filtering keeps matching the data.
+function catLabel(v) {
+  return t('categories.' + v.toLowerCase().replace(/[\s-]+/g, '_'))
+}
 
+function localized(value) {
+  if (typeof value === 'string') return value
+  return value?.[locale.value] || value?.en || ''
+}
+ 
 const filtered = computed(() => {
   let list = activeType.value === 'All' ? [...events] : events.filter(e => e.type === activeType.value)
   return list
 })
 </script>
-
+ 
 <style scoped>
 .events-grid-wrap { padding-top: 2rem; padding-bottom: 3.5rem; }
 .events-grid {
@@ -72,7 +85,7 @@ const filtered = computed(() => {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
 }
-
+ 
 /* Dark event card */
 .event-card {
   background: var(--navy);
@@ -84,7 +97,7 @@ const filtered = computed(() => {
   transition: background var(--transition);
 }
 .event-card:hover { background: var(--navy-700); }
-
+ 
 .event-header {
   display: flex;
   justify-content: space-between;
@@ -105,7 +118,7 @@ const filtered = computed(() => {
   line-height: 1;
   margin-top: 0.1rem;
 }
-
+ 
 .event-type-badge {
   background: rgba(255,255,255,0.1);
   color: rgba(255,255,255,0.75);
@@ -114,7 +127,7 @@ const filtered = computed(() => {
   padding: 0.25rem 0.65rem;
   border-radius: var(--radius-pill);
 }
-
+ 
 .event-title {
   color: var(--white);
   font-size: 1rem;
@@ -135,7 +148,7 @@ const filtered = computed(() => {
   background: rgba(255,255,255,0.35);
   flex-shrink: 0;
 }
-
+ 
 .event-footer { margin-top: auto; display: flex; justify-content: flex-end; }
 .register-link {
   font-size: 0.85rem;
@@ -145,7 +158,7 @@ const filtered = computed(() => {
   transition: opacity var(--transition);
 }
 .register-link:hover { opacity: 0.7; }
-
+ 
 .sort-select {
   padding: 0.4rem 0.8rem;
   border: 1.5px solid var(--grey-200);
@@ -156,7 +169,7 @@ const filtered = computed(() => {
   outline: none;
   cursor: pointer;
 }
-
+ 
 @media (max-width: 640px) {
   .events-grid { grid-template-columns: 1fr; }
   .filter-bar {

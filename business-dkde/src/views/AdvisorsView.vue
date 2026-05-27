@@ -2,12 +2,12 @@
   <div>
     <div class="page-hero">
       <div class="container">
-        <span class="page-hero-label">Advisors</span>
-        <h1>Advisory Board</h1>
-        <p>Experienced professionals guiding Business DE-DK's strategic direction.</p>
+        <span class="page-hero-label">{{ t('advisors.label') }}</span>
+        <h1>{{ t('advisors.title') }}</h1>
+        <p>{{ t('advisors.intro') }}</p>
       </div>
     </div>
-
+ 
     <section class="section">
       <div class="container">
         <div class="grid-3">
@@ -15,10 +15,10 @@
             <div class="advisor-avatar">{{ a.initials }}</div>
             <div class="advisor-body">
               <h3>{{ a.name }}</h3>
-              <p class="advisor-title">{{ a.title }}</p>
+              <p class="advisor-title">{{ t(a.roleKey) }}</p>
               <p class="advisor-org">{{ a.org }}</p>
               <span :class="['badge-country', a.country === 'DE' ? 'badge-de' : 'badge-dk']" style="margin-top:0.6rem;display:inline-block;">{{ a.country }}</span>
-              <p class="advisor-bio">{{ a.bio }}</p>
+              <p class="advisor-bio">{{ t(a.bioKey) }}</p>
             </div>
           </div>
         </div>
@@ -26,18 +26,22 @@
     </section>
   </div>
 </template>
-
+ 
 <script setup>
+import { useI18n } from 'vue-i18n'
+ 
+const { t } = useI18n()
+ 
 const advisors = [
-  { initials: 'IP', name: 'Dr. Ingrid Petersen', title: 'Chairperson', org: 'Sønderborg Municipality', country: 'DK', bio: 'Former Director of Business Development with 20 years of experience in cross-border regional policy.' },
-  { initials: 'HB', name: 'Hans-Joachim Brandt', title: 'Vice Chair', org: 'IHK Schleswig-Holstein', country: 'DE', bio: 'CEO of the Schleswig-Holstein Chamber of Commerce with expertise in international trade.' },
-  { initials: 'MC', name: 'Mette Christoffersen', title: 'Board Member', org: 'University of Southern Denmark', country: 'DK', bio: 'Professor of Regional Economics, specialising in cross-border labour markets.' },
-  { initials: 'SM', name: 'Stefan Müller', title: 'Board Member', org: 'Invest in Schleswig-Holstein', country: 'DE', bio: 'Investment promotion specialist who has supported over 50 international companies.' },
-  { initials: 'KT', name: 'Karen Lund Thomsen', title: 'Board Member', org: 'Business Aabenraa', country: 'DK', bio: 'Economic development expert with a focus on SME internationalisation.' },
-  { initials: 'RA', name: 'Rolf Andersen', title: 'Board Member', org: 'Flensburg Port Authority', country: 'DE', bio: 'Port director and logistics expert facilitating trade flows between Denmark and Germany.' }
+  { initials: 'IP', name: 'Dr. Ingrid Petersen',   roleKey: 'advisors.roles.chair',        org: 'Sønderborg Municipality',          country: 'DK', bioKey: 'advisors.bios.petersen' },
+  { initials: 'HB', name: 'Hans-Joachim Brandt',   roleKey: 'advisors.roles.vice_chair',   org: 'IHK Schleswig-Holstein',           country: 'DE', bioKey: 'advisors.bios.brandt' },
+  { initials: 'MC', name: 'Mette Christoffersen',  roleKey: 'advisors.roles.board_member', org: 'University of Southern Denmark',    country: 'DK', bioKey: 'advisors.bios.christoffersen' },
+  { initials: 'SM', name: 'Stefan Müller',         roleKey: 'advisors.roles.board_member', org: 'Invest in Schleswig-Holstein',     country: 'DE', bioKey: 'advisors.bios.mueller' },
+  { initials: 'KT', name: 'Karen Lund Thomsen',    roleKey: 'advisors.roles.board_member', org: 'Business Aabenraa',                country: 'DK', bioKey: 'advisors.bios.thomsen' },
+  { initials: 'RA', name: 'Rolf Andersen',         roleKey: 'advisors.roles.board_member', org: 'Flensburg Port Authority',         country: 'DE', bioKey: 'advisors.bios.andersen' }
 ]
 </script>
-
+ 
 <style scoped>
 .advisor-card { padding: 1.5rem; display: flex; flex-direction: column; gap: 0; }
 .advisor-avatar {
