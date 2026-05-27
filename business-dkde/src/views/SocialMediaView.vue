@@ -47,7 +47,7 @@ const latestVideos = videos.slice(0, 3)
 const socials = [
   {
     name: 'Facebook',
-    url: 'https://facebook.com',
+    url: 'https://www.facebook.com/dedkofficial/',
     bg: 'linear-gradient(135deg,#1877F2,#0d5ec7)',
     desc: 'Join our Facebook community for news and event updates.',
     cta: 'Visit Page',
@@ -55,7 +55,7 @@ const socials = [
   },
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com',
+    url: 'https://www.linkedin.com/company/businessdedk',
     bg: 'linear-gradient(135deg,#0A66C2,#064e9a)',
     desc: 'Connect professionally and follow our business insights.',
     cta: 'Follow Us',
@@ -63,7 +63,7 @@ const socials = [
   },
   {
     name: 'YouTube',
-    url: 'https://youtube.com',
+    url: 'https://www.youtube.com/@BusinessDEDK',
     bg: 'linear-gradient(135deg,#FF0000,#cc0000)',
     desc: 'Watch our interview series and event recordings.',
     cta: 'Subscribe',
