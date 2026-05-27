@@ -9,8 +9,8 @@ export const events = [
     day: "15",
     title: {
       en: "Cross-Border Business Forum",
-      de: "GrenzÃ¼berschreitendes Wirtschaftsforum",
-      da: "GrÃ¦nseoverskridende erhvervsforum"
+      de: "Grenzüberschreitendes Wirtschaftsforum",
+      da: "Grænseoverskridende erhvervsforum"
     },
     location: "Flensburg, DE",
     type: "Forum",
@@ -27,8 +27,8 @@ export const events = [
     day: "10",
     title: {
       en: "Networking Breakfast",
-      de: "Networking-FrÃ¼hstÃ¼ck",
-      da: "NetvÃ¦rksmorgenmad"
+      de: "Networking-Frühstück",
+      da: "Netværksmorgenmad"
     },
     location: "Kolding, DK",
     type: "Networking",
@@ -64,7 +64,7 @@ export const events = [
     title: {
       en: "DE-DK Trade Summit",
       de: "DE-DK Handelsgipfel",
-      da: "DE-DK handelsmÃ¸de"
+      da: "DE-DK handelsmøde"
     },
     location: "Aarhus, DK",
     type: "Business",
@@ -84,7 +84,7 @@ export const events = [
       de: "Talent- und Arbeitsmarktforum",
       da: "Talent- og arbejdsmarkedsforum"
     },
-    location: "SÃ¸nderborg, DK",
+    location: "Sønderborg, DK",
     type: "Forum",
     date: "2025-08-19",
     upcoming: true
@@ -99,8 +99,8 @@ export const events = [
     day: "11",
     title: {
       en: "Annual Business Conference",
-      de: "JÃ¤hrliche Wirtschaftskonferenz",
-      da: "Ã…rlig erhvervskonference"
+      de: "Jährliche Wirtschaftskonferenz",
+      da: "Årlig erhvervskonference"
     },
     location: "Flensburg, DE",
     type: "Business",

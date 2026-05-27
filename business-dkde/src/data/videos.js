@@ -4,8 +4,8 @@ export const videos = [
     youtubeId: "n3TRnWy4CF4",
     title: {
       en: "Cross-border cooperation in practice",
-      de: "GrenzÃ¼berschreitende Zusammenarbeit in der Praxis",
-      da: "GrÃ¦nseoverskridende samarbejde i praksis"
+      de: "Grenzüberschreitende Zusammenarbeit in der Praxis",
+      da: "Grænseoverskridende samarbejde i praksis"
     },
     author: "Business-region",
     company: "Business DE-DK",
@@ -19,8 +19,8 @@ export const videos = [
     youtubeId: "a11VoY2aQfY",
     title: {
       en: "When onboarding becomes holistic: security for international employees",
-      de: "Wenn Onboarding ganzheitlich wird: Sicherheit fÃ¼r internationale Mitarbeitende",
-      da: "NÃ¥r onboarding bliver helhed: Tryghed for internationale medarbejdere"
+      de: "Wenn Onboarding ganzheitlich wird: Sicherheit für internationale Mitarbeitende",
+      da: "Når onboarding bliver helhedsorienteret: Tryghed for internationale medarbejdere"
     },
     author: "Business-region",
     company: "Business DE-DK",
@@ -34,8 +34,8 @@ export const videos = [
     youtubeId: "JpbeawD-O2Q",
     title: {
       en: "How the Chamber of Commerce supports Danish-German business cooperation",
-      de: "Wie die Industrie- und Handelskammer die deutsch-dÃ¤nische Unternehmenszusammenarbeit unterstÃ¼tzt",
-      da: "Hvordan Industri- og Handelskammeret stÃ¸tter dansk-tysk erhvervssamarbejde"
+      de: "Wie die Industrie- und Handelskammer die deutsch-dänische Unternehmenszusammenarbeit unterstützt",
+      da: "Hvordan Industri- og Handelskammeret støtter dansk-tysk erhvervssamarbejde"
     },
     author: "Business-region",
     company: "Business DE-DK",
@@ -48,9 +48,9 @@ export const videos = [
     id: 4,
     youtubeId: "hnbAzHQNnik",
     title: {
-      en: "Workplace Integration â€“ Working Abroad as a Trainer",
-      de: "Integration am Arbeitsplatz â€“ im Ausland als Trainer arbeiten",
-      da: "Integration pÃ¥ arbejdspladsen â€“ at arbejde i udlandet som trainer"
+      en: "Workplace integration – working abroad as a trainer",
+      de: "Integration am Arbeitsplatz – im Ausland als Trainer arbeiten",
+      da: "Integration på arbejdspladsen – at arbejde i udlandet som træner"
     },
     author: "Business-region",
     company: "Business DE-DK",
@@ -63,9 +63,9 @@ export const videos = [
     id: 5,
     youtubeId: "ZxtI77di304",
     title: {
-      en: "Why recruiting international labour is difficult â€“ and what you can do about it",
-      de: "Warum internationale FachkrÃ¤fte schwer zu rekrutieren sind â€“ und was Sie dagegen tun kÃ¶nnen",
-      da: "Derfor er det svÃ¦rt at rekruttere international arbejdskraft â€“ og hvad du kan gÃ¸re ved det"
+      en: "Why recruiting international labour is difficult – and what you can do about it",
+      de: "Warum internationale Fachkräfte schwer zu rekrutieren sind – und was Sie dagegen tun können",
+      da: "Derfor er det svært at rekruttere international arbejdskraft – og hvad du kan gøre ved det"
     },
     author: "Business-region",
     company: "Business DE-DK",
@@ -78,9 +78,9 @@ export const videos = [
     id: 6,
     youtubeId: "s98OJeTzgVM",
     title: {
-      en: "Cross-border solutions for the labour shortage â€“ dialogue in Eutin",
-      de: "GrenzÃ¼berschreitende LÃ¶sungen fÃ¼r den ArbeitskrÃ¤ftemangel â€“ Dialog in Eutin",
-      da: "GrÃ¦nseoverskridende lÃ¸sninger pÃ¥ manglen pÃ¥ arbejdskraft â€“ dialog i Eutin"
+      en: "Cross-border solutions for the labour shortage – dialogue in Eutin",
+      de: "Grenzüberschreitende Lösungen für den Arbeitskräftemangel – Dialog in Eutin",
+      da: "Grænseoverskridende løsninger på manglen på arbejdskraft – dialog i Eutin"
     },
     author: "Business-region",
     company: "Business DE-DK",
@@ -94,8 +94,8 @@ export const videos = [
     youtubeId: "lpEReNTKuus",
     title: {
       en: "Strengthening cross-border cooperation for economic growth",
-      de: "StÃ¤rkung der grenzÃ¼berschreitenden Zusammenarbeit fÃ¼r wirtschaftliches Wachstum",
-      da: "Styrkelse af grÃ¦nseoverskridende samarbejde for Ã¸konomisk vÃ¦kst"
+      de: "Stärkung der grenzüberschreitenden Zusammenarbeit für wirtschaftliches Wachstum",
+      da: "Styrkelse af grænseoverskridende samarbejde for økonomisk vækst"
     },
     author: "Business-region",
     company: "Business DE-DK",
@@ -104,6 +104,6 @@ export const videos = [
     date: "2025-01-22",
     thumbnail: "https://i.ytimg.com/vi/lpEReNTKuus/hqdefault.jpg"
   }
-]
+];
 
-export const videoTopics = ['All', 'Cross-border', 'Labour Market', 'Business']
+export const videoTopics = ["All", "Cross-border", "Labour Market", "Business"];

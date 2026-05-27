@@ -2,37 +2,37 @@ export const members = [
   {
     id: 1,
     initials: "AA",
-    name: "Agentur fÃ¼r Arbeit Flensburg",
+    name: "Agentur für Arbeit Flensburg",
     role: {
       en: "Federal Employment Agency",
-      de: "Bundesagentur fÃ¼r Arbeit",
-      da: "FÃ¸deralt arbejdsagentur"
+      de: "Bundesagentur für Arbeit",
+      da: "Føderalt arbejdsagentur"
     },
-    company: "Agentur fÃ¼r Arbeit Flensburg",
+    company: "Agentur für Arbeit Flensburg",
     country: "DE",
     sector: "Public Sector",
     bio: {
       en: "The Federal Employment Agency office in Flensburg supports job seekers and employers in the border region with placement services, training programmes, and cross-border labour market initiatives.",
-      de: "Die Agentur fÃ¼r Arbeit Flensburg unterstÃ¼tzt Arbeitssuchende und Arbeitgeber in der Grenzregion mit Vermittlungsangeboten, Weiterbildungsprogrammen und grenzÃ¼berschreitenden Arbeitsmarktinitiativen.",
-      da: "Agenturet for arbejde i Flensborg stÃ¸tter jobsÃ¸gende og arbejdsgivere i grÃ¦nseregionen med formidling, uddannelsesprogrammer og grÃ¦nseoverskridende arbejdsmarkedsinitiativer."
+      de: "Die Agentur für Arbeit Flensburg unterstützt Arbeitssuchende und Arbeitgeber in der Grenzregion mit Vermittlungsangeboten, Weiterbildungsprogrammen und grenzüberschreitenden Arbeitsmarktinitiativen.",
+      da: "Agenturet for arbejde i Flensborg støtter jobsøgende og arbejdsgivere i grænseregionen med formidling, uddannelsesprogrammer og grænseoverskridende arbejdsmarkedsinitiativer."
     }
   },
   {
     id: 2,
     initials: "BA",
-    name: "Bundesagentur fÃ¼r Arbeit",
+    name: "Bundesagentur für Arbeit",
     role: {
       en: "Federal Employment Agency",
-      de: "Bundesagentur fÃ¼r Arbeit",
-      da: "FÃ¸deralt arbejdsagentur"
+      de: "Bundesagentur für Arbeit",
+      da: "Føderalt arbejdsagentur"
     },
-    company: "Bundesagentur fÃ¼r Arbeit",
+    company: "Bundesagentur für Arbeit",
     country: "DE",
     sector: "Public Sector",
     bio: {
       en: "Germany's Federal Employment Agency provides nationwide labour market services and plays a key role in facilitating cross-border workforce mobility between Germany and Denmark.",
-      de: "Die Bundesagentur fÃ¼r Arbeit bietet deutschlandweit Arbeitsmarktdienstleistungen an und spielt eine zentrale Rolle bei der FÃ¶rderung grenzÃ¼berschreitender ArbeitskrÃ¤ftemobilitÃ¤t zwischen Deutschland und DÃ¤nemark.",
-      da: "Tysklands fÃ¸derale arbejdsagentur tilbyder landsdÃ¦kkende arbejdsmarkedsservice og spiller en central rolle i at fremme grÃ¦nseoverskridende mobilitet mellem Tyskland og Danmark."
+      de: "Die Bundesagentur für Arbeit bietet deutschlandweit Arbeitsmarktdienstleistungen an und spielt eine zentrale Rolle bei der Förderung grenzüberschreitender Arbeitskräftemobilität zwischen Deutschland und Dänemark.",
+      da: "Tysklands føderale arbejdsagentur tilbyder landsdækkende arbejdsmarkedsservice og spiller en central rolle i at fremme grænseoverskridende mobilitet mellem Tyskland og Danmark."
     }
   },
   {
@@ -41,7 +41,7 @@ export const members = [
     name: "Business Aabenraa",
     role: {
       en: "Business Development Organisation",
-      de: "WirtschaftsfÃ¶rderungsorganisation",
+      de: "Wirtschaftsförderungsorganisation",
       da: "Erhvervsudviklingsorganisation"
     },
     company: "Business Aabenraa",
@@ -49,8 +49,8 @@ export const members = [
     sector: "Government",
     bio: {
       en: "Business Aabenraa supports local businesses in the Aabenraa municipality, driving growth and cross-border collaboration in the Southern Jutland area close to the German border.",
-      de: "Business Aabenraa unterstÃ¼tzt lokale Unternehmen in der Kommune Aabenraa und fÃ¶rdert Wachstum sowie grenzÃ¼berschreitende Zusammenarbeit in SÃ¼djÃ¼tland nahe der deutschen Grenze.",
-      da: "Business Aabenraa stÃ¸tter lokale virksomheder i Aabenraa Kommune og fremmer vÃ¦kst og grÃ¦nseoverskridende samarbejde i SÃ¸nderjylland tÃ¦t pÃ¥ den tyske grÃ¦nse."
+      de: "Business Aabenraa unterstützt lokale Unternehmen in der Kommune Aabenraa und fördert Wachstum sowie grenzüberschreitende Zusammenarbeit in Südjütland nahe der deutschen Grenze.",
+      da: "Business Aabenraa støtter lokale virksomheder i Aabenraa Kommune og fremmer vækst og grænseoverskridende samarbejde i Sønderjylland tæt på den tyske grænse."
     }
   },
   {
@@ -59,7 +59,7 @@ export const members = [
     name: "Business Esbjerg",
     role: {
       en: "Business Development Organisation",
-      de: "WirtschaftsfÃ¶rderungsorganisation",
+      de: "Wirtschaftsförderungsorganisation",
       da: "Erhvervsudviklingsorganisation"
     },
     company: "Business Esbjerg",
@@ -67,8 +67,8 @@ export const members = [
     sector: "Government",
     bio: {
       en: "Business Esbjerg strengthens the local business community in Esbjerg and facilitates international trade connections, including with partners in northern Germany.",
-      de: "Business Esbjerg stÃ¤rkt die lokale Wirtschaftsgemeinschaft in Esbjerg und erleichtert internationale Handelskontakte, auch mit Partnern in Norddeutschland.",
-      da: "Business Esbjerg styrker det lokale erhvervsliv i Esbjerg og faciliterer internationale handelsforbindelser, ogsÃ¥ med partnere i Nordtyskland."
+      de: "Business Esbjerg stärkt die lokale Wirtschaftsgemeinschaft in Esbjerg und erleichtert internationale Handelskontakte, auch mit Partnern in Norddeutschland.",
+      da: "Business Esbjerg styrker det lokale erhvervsliv i Esbjerg og faciliterer internationale handelsforbindelser, også med partnere i Nordtyskland."
     }
   },
   {
@@ -77,7 +77,7 @@ export const members = [
     name: "Business Kolding",
     role: {
       en: "Business Development Organisation",
-      de: "WirtschaftsfÃ¶rderungsorganisation",
+      de: "Wirtschaftsförderungsorganisation",
       da: "Erhvervsudviklingsorganisation"
     },
     company: "Business Kolding",
@@ -85,8 +85,8 @@ export const members = [
     sector: "Government",
     bio: {
       en: "Business Kolding works to attract investment and support existing businesses in the Kolding municipality, with a focus on cross-border trade and the Triangle Region.",
-      de: "Business Kolding arbeitet daran, Investitionen anzuziehen und bestehende Unternehmen in der Kommune Kolding zu unterstÃ¼tzen, mit Fokus auf grenzÃ¼berschreitenden Handel und die Triangle Region.",
-      da: "Business Kolding arbejder for at tiltrÃ¦kke investeringer og stÃ¸tte virksomheder i Kolding Kommune med fokus pÃ¥ grÃ¦nsehandel og TrekantomrÃ¥det."
+      de: "Business Kolding arbeitet daran, Investitionen anzuziehen und bestehende Unternehmen in der Kommune Kolding zu unterstützen, mit Fokus auf grenzüberschreitenden Handel und die Triangle Region.",
+      da: "Business Kolding arbejder for at tiltrække investeringer og støtte virksomheder i Kolding Kommune med fokus på grænsehandel og Trekantområdet."
     }
   },
   {
@@ -95,7 +95,7 @@ export const members = [
     name: "Copenhagen Capacity",
     role: {
       en: "Investment Promotion Agency",
-      de: "InvestitionsfÃ¶rderagentur",
+      de: "Investitionsförderagentur",
       da: "Investeringsfremmeagentur"
     },
     company: "Copenhagen Capacity",
@@ -103,44 +103,44 @@ export const members = [
     sector: "Government",
     bio: {
       en: "Copenhagen Capacity is the official investment promotion agency for the Greater Copenhagen area, attracting foreign direct investment and international talent to Denmark.",
-      de: "Copenhagen Capacity ist die offizielle InvestitionsfÃ¶rderagentur fÃ¼r Greater Copenhagen und zieht auslÃ¤ndische Direktinvestitionen sowie internationale Talente nach DÃ¤nemark.",
-      da: "Copenhagen Capacity er det officielle investeringsfremmeagentur for Greater Copenhagen og tiltrÃ¦kker udenlandske investeringer og internationalt talent til Danmark."
+      de: "Copenhagen Capacity ist die offizielle Investitionsförderagentur für Greater Copenhagen und zieht ausländische Direktinvestitionen sowie internationale Talente nach Dänemark.",
+      da: "Copenhagen Capacity er det officielle investeringsfremmeagentur for Greater Copenhagen og tiltrækker udenlandske investeringer og internationalt talent til Danmark."
     }
   },
   {
     id: 7,
     initials: "DI",
-    name: "DI â€“ Dansk Industri Deutschland GmbH",
+    name: "DI – Dansk Industri Deutschland GmbH",
     role: {
       en: "Industry Association",
       de: "Industrieverband",
       da: "Brancheforening"
     },
-    company: "DI â€“ Dansk Industri Deutschland GmbH",
+    company: "DI – Dansk Industri Deutschland GmbH",
     country: "DE",
     sector: "Government",
     bio: {
       en: "The German arm of the Confederation of Danish Industry, DI Deutschland facilitates Danish-German business relations and supports Danish companies operating in the German market.",
-      de: "Als deutscher Zweig des dÃ¤nischen Industrieverbands erleichtert DI Deutschland deutsch-dÃ¤nische GeschÃ¤ftsbeziehungen und unterstÃ¼tzt dÃ¤nische Unternehmen auf dem deutschen Markt.",
-      da: "Som den tyske afdeling af Dansk Industri fremmer DI Deutschland dansk-tyske erhvervsrelationer og stÃ¸tter danske virksomheder pÃ¥ det tyske marked."
+      de: "Als deutscher Zweig des dänischen Industrieverbands erleichtert DI Deutschland deutsch-dänische Geschäftsbeziehungen und unterstützt dänische Unternehmen auf dem deutschen Markt.",
+      da: "Som den tyske afdeling af Dansk Industri fremmer DI Deutschland dansk-tyske erhvervsrelationer og støtter danske virksomheder på det tyske marked."
     }
   },
   {
     id: 8,
     initials: "FS",
-    name: "Foreningen SÃ¸nderborg VÃ¦kstrÃ¥d",
+    name: "Foreningen Sønderborg Vækstråd",
     role: {
       en: "Growth Council",
       de: "Wachstumsrat",
-      da: "VÃ¦kstrÃ¥d"
+      da: "Vækstråd"
     },
-    company: "Foreningen SÃ¸nderborg VÃ¦kstrÃ¥d",
+    company: "Foreningen Sønderborg Vækstråd",
     country: "DK",
     sector: "Government",
     bio: {
-      en: "SÃ¸nderborg VÃ¦kstrÃ¥d is a growth council driving economic development and green transition in the SÃ¸nderborg area, home to major initiatives like ProjectZero.",
-      de: "SÃ¸nderborg VÃ¦kstrÃ¥d ist ein Wachstumsrat, der wirtschaftliche Entwicklung und grÃ¼ne Transformation in der Region SÃ¸nderborg vorantreibt, unter anderem mit Initiativen wie ProjectZero.",
-      da: "SÃ¸nderborg VÃ¦kstrÃ¥d driver Ã¸konomisk udvikling og grÃ¸n omstilling i SÃ¸nderborg-omrÃ¥det, blandt andet gennem initiativer som ProjectZero."
+      en: "Sønderborg Vækstråd is a growth council driving economic development and green transition in the Sønderborg area, home to major initiatives like ProjectZero.",
+      de: "Sønderborg Vækstråd ist ein Wachstumsrat, der wirtschaftliche Entwicklung und grüne Transformation in der Region Sønderborg vorantreibt, unter anderem mit Initiativen wie ProjectZero.",
+      da: "Sønderborg Vækstråd driver økonomisk udvikling og grøn omstilling i Sønderborg-området, blandt andet gennem initiativer som ProjectZero."
     }
   },
   {
@@ -157,8 +157,8 @@ export const members = [
     sector: "Government",
     bio: {
       en: "HanseBelt promotes economic and regional development across the Hamburg Metropolitan Region and strengthens cross-border cooperation with Scandinavian partners.",
-      de: "HanseBelt fÃ¶rdert die wirtschaftliche und regionale Entwicklung in der Metropolregion Hamburg und stÃ¤rkt die grenzÃ¼berschreitende Zusammenarbeit mit skandinavischen Partnern.",
-      da: "HanseBelt fremmer Ã¸konomisk og regional udvikling i Hamborgs metropolregion og styrker grÃ¦nseoverskridende samarbejde med skandinaviske partnere."
+      de: "HanseBelt fördert die wirtschaftliche und regionale Entwicklung in der Metropolregion Hamburg und stärkt die grenzüberschreitende Zusammenarbeit mit skandinavischen Partnern.",
+      da: "HanseBelt fremmer økonomisk og regional udvikling i Hamborgs metropolregion og styrker grænseoverskridende samarbejde med skandinaviske partnere."
     }
   },
   {
@@ -167,16 +167,16 @@ export const members = [
     name: "Hochschule Flensburg",
     role: {
       en: "University of Applied Sciences",
-      de: "Hochschule fÃ¼r angewandte Wissenschaften",
-      da: "ProfessionshÃ¸jskole"
+      de: "Hochschule für angewandte Wissenschaften",
+      da: "Professionshøjskole"
     },
-    company: "Hochschule Flensburg â€“ JackstÃ¤dt-Zentrum",
+    company: "Hochschule Flensburg – Jackstädt-Zentrum",
     country: "DE",
     sector: "Education",
     bio: {
-      en: "Hochschule Flensburg's JackstÃ¤dt-Zentrum focuses on entrepreneurship and innovation research, fostering cross-border academic and business collaboration in the DE-DK border region.",
-      de: "Das JackstÃ¤dt-Zentrum der Hochschule Flensburg konzentriert sich auf Entrepreneurship und Innovationsforschung und fÃ¶rdert akademische sowie wirtschaftliche Zusammenarbeit in der deutsch-dÃ¤nischen Grenzregion.",
-      da: "JackstÃ¤dt-Zentrum ved Hochschule Flensburg fokuserer pÃ¥ entreprenÃ¸rskab og innovationsforskning og fremmer akademisk og erhvervsmÃ¦ssigt samarbejde i DE-DK-grÃ¦nseregionen."
+      en: "Hochschule Flensburg's Jackstädt-Zentrum focuses on entrepreneurship and innovation research, fostering cross-border academic and business collaboration in the DE-DK border region.",
+      de: "Das Jackstädt-Zentrum der Hochschule Flensburg konzentriert sich auf Entrepreneurship und Innovationsforschung und fördert akademische sowie wirtschaftliche Zusammenarbeit in der deutsch-dänischen Grenzregion.",
+      da: "Jackstädt-Zentrum ved Hochschule Flensburg fokuserer på entreprenørskab og innovationsforskning og fremmer akademisk og erhvervsmæssigt samarbejde i DE-DK-grænseregionen."
     }
   },
   {
@@ -193,8 +193,8 @@ export const members = [
     sector: "Government",
     bio: {
       en: "The IHK Flensburg represents the interests of businesses in the Flensburg region and is a key partner in promoting cross-border trade and economic exchange between Germany and Denmark.",
-      de: "Die IHK Flensburg vertritt die Interessen der Unternehmen in der Region Flensburg und ist ein wichtiger Partner fÃ¼r grenzÃ¼berschreitenden Handel und wirtschaftlichen Austausch zwischen Deutschland und DÃ¤nemark.",
-      da: "IHK Flensburg reprÃ¦senterer virksomhedernes interesser i Flensborg-regionen og er en vigtig partner for grÃ¦nsehandel og Ã¸konomisk udveksling mellem Tyskland og Danmark."
+      de: "Die IHK Flensburg vertritt die Interessen der Unternehmen in der Region Flensburg und ist ein wichtiger Partner für grenzüberschreitenden Handel und wirtschaftlichen Austausch zwischen Deutschland und Dänemark.",
+      da: "IHK Flensburg repræsenterer virksomhedernes interesser i Flensborg-regionen og er en vigtig partner for grænsehandel og økonomisk udveksling mellem Tyskland og Danmark."
     }
   },
   {
@@ -211,8 +211,8 @@ export const members = [
     sector: "Government",
     bio: {
       en: "KielRegion GmbH drives economic development and innovation in the Kiel metropolitan area, connecting businesses and municipalities for sustainable regional growth.",
-      de: "Die KielRegion GmbH treibt wirtschaftliche Entwicklung und Innovation im Raum Kiel voran und vernetzt Unternehmen und Kommunen fÃ¼r nachhaltiges regionales Wachstum.",
-      da: "KielRegion GmbH driver Ã¸konomisk udvikling og innovation i Kiel-omrÃ¥det og forbinder virksomheder og kommuner for bÃ¦redygtig regional vÃ¦kst."
+      de: "Die KielRegion GmbH treibt wirtschaftliche Entwicklung und Innovation im Raum Kiel voran und vernetzt Unternehmen und Kommunen für nachhaltiges regionales Wachstum.",
+      da: "KielRegion GmbH driver økonomisk udvikling og innovation i Kiel-området og forbinder virksomheder og kommuner for bæredygtig regional vækst."
     }
   },
   {
@@ -222,15 +222,15 @@ export const members = [
     role: {
       en: "Regional Government",
       de: "Regionalverwaltung",
-      da: "RegionsrÃ¥d"
+      da: "Regionsråd"
     },
     company: "Region Syddanmark",
     country: "DK",
     sector: "Public Sector",
     bio: {
       en: "Region Syddanmark is the regional government of Southern Denmark, leading initiatives in healthcare, business development, education, and cross-border cooperation with Schleswig-Holstein.",
-      de: "Region Syddanmark ist die Regionalverwaltung SÃ¼ddÃ¤nemarks und leitet Initiativen in Gesundheitswesen, Wirtschaftsentwicklung, Bildung und grenzÃ¼berschreitender Zusammenarbeit mit Schleswig-Holstein.",
-      da: "Region Syddanmark er den regionale myndighed i Syddanmark og leder initiativer inden for sundhed, erhvervsudvikling, uddannelse og grÃ¦nseoverskridende samarbejde med Slesvig-Holsten."
+      de: "Region Syddanmark ist die Regionalverwaltung Süddänemarks und leitet Initiativen in Gesundheitswesen, Wirtschaftsentwicklung, Bildung und grenzüberschreitender Zusammenarbeit mit Schleswig-Holstein.",
+      da: "Region Syddanmark er den regionale myndighed i Syddanmark og leder initiativer inden for sundhed, erhvervsudvikling, uddannelse og grænseoverskridende samarbejde med Slesvig-Holsten."
     }
   },
   {
@@ -247,8 +247,8 @@ export const members = [
     sector: "Public Sector",
     bio: {
       en: "The Northern Regional Directorate of the Federal Employment Agency coordinates labour market policy and employment services across Schleswig-Holstein and Hamburg.",
-      de: "Die Regionaldirektion Nord der Bundesagentur fÃ¼r Arbeit koordiniert Arbeitsmarktpolitik und BeschÃ¤ftigungsdienstleistungen in Schleswig-Holstein und Hamburg.",
-      da: "Det nordlige regionaldirektorat under den fÃ¸derale arbejdsagentur koordinerer arbejdsmarkedspolitik og beskÃ¦ftigelsesservice i Slesvig-Holsten og Hamborg."
+      de: "Die Regionaldirektion Nord der Bundesagentur für Arbeit koordiniert Arbeitsmarktpolitik und Beschäftigungsdienstleistungen in Schleswig-Holstein und Hamburg.",
+      da: "Det nordlige regionaldirektorat under den føderale arbejdsagentur koordinerer arbejdsmarkedspolitik og beskæftigelsesservice i Slesvig-Holsten og Hamborg."
     }
   },
   {
@@ -265,98 +265,98 @@ export const members = [
     sector: "Government",
     bio: {
       en: "Erhvervshus Sydjylland is a business service centre offering guidance, networking, and growth support to SMEs across Southern Jutland, with strong links to the German border region.",
-      de: "Erhvervshus Sydjylland ist ein Business-Service-Center, das KMU in SÃ¼djÃ¼tland Beratung, Netzwerke und WachstumsunterstÃ¼tzung bietet, mit starken Verbindungen zur deutschen Grenzregion.",
-      da: "Erhvervshus Sydjylland er et erhvervsservicecenter, der tilbyder vejledning, netvÃ¦rk og vÃ¦kststÃ¸tte til SMVâ€™er i SÃ¸nderjylland med stÃ¦rke forbindelser til den tyske grÃ¦nseregion."
+      de: "Erhvervshus Sydjylland ist ein Business-Service-Center, das KMU in Südjütland Beratung, Netzwerke und Wachstumsunterstützung bietet, mit starken Verbindungen zur deutschen Grenzregion.",
+      da: "Erhvervshus Sydjylland er et erhvervsservicecenter, der tilbyder vejledning, netværk og vækststøtte til SMV’er i Sønderjylland med stærke forbindelser til den tyske grænseregion."
     }
   },
   {
     id: 16,
     initials: "TE",
-    name: "TÃ¸nder ErhvervsrÃ¥d",
+    name: "Tønder Erhvervsråd",
     role: {
       en: "Business Council",
       de: "Wirtschaftsrat",
-      da: "ErhvervsrÃ¥d"
+      da: "Erhvervsråd"
     },
-    company: "TÃ¸nder ErhvervsrÃ¥d",
+    company: "Tønder Erhvervsråd",
     country: "DK",
     sector: "Government",
     bio: {
-      en: "TÃ¸nder ErhvervsrÃ¥d supports local business development in TÃ¸nder Municipality, one of Denmark's most border-proximate areas, with a strong focus on German-Danish commercial relations.",
-      de: "TÃ¸nder ErhvervsrÃ¥d unterstÃ¼tzt die lokale Wirtschaftsentwicklung in der Kommune TÃ¸nder, einer der grenznÃ¤chsten Regionen DÃ¤nemarks, mit starkem Fokus auf deutsch-dÃ¤nische GeschÃ¤ftsbeziehungen.",
-      da: "TÃ¸nder ErhvervsrÃ¥d stÃ¸tter lokal erhvervsudvikling i TÃ¸nder Kommune, et af Danmarks mest grÃ¦nsenÃ¦re omrÃ¥der, med stÃ¦rkt fokus pÃ¥ dansk-tyske handelsrelationer."
+      en: "Tønder Erhvervsråd supports local business development in Tønder Municipality, one of Denmark's most border-proximate areas, with a strong focus on German-Danish commercial relations.",
+      de: "Tønder Erhvervsråd unterstützt die lokale Wirtschaftsentwicklung in der Kommune Tønder, einer der grenznächsten Regionen Dänemarks, mit starkem Fokus auf deutsch-dänische Geschäftsbeziehungen.",
+      da: "Tønder Erhvervsråd støtter lokal erhvervsudvikling i Tønder Kommune, et af Danmarks mest grænsenære områder, med stærkt fokus på dansk-tyske handelsrelationer."
     }
   },
   {
     id: 17,
     initials: "TD",
-    name: "TrekantomrÃ¥det Danmark",
+    name: "Trekantområdet Danmark",
     role: {
       en: "Regional Partnership",
       de: "Regionale Partnerschaft",
       da: "Regionalt partnerskab"
     },
-    company: "TrekantomrÃ¥det Danmark",
+    company: "Trekantområdet Danmark",
     country: "DK",
     sector: "Government",
     bio: {
-      en: "TrekantomrÃ¥det is a cross-municipal collaboration in the Triangle Region of Denmark, working to attract business and talent while strengthening strategic infrastructure and connectivity.",
-      de: "TrekantomrÃ¥det ist eine kommunale Zusammenarbeit in der dÃ¤nischen Triangle Region, die Unternehmen und Talente anzieht und strategische Infrastruktur sowie Vernetzung stÃ¤rkt.",
-      da: "TrekantomrÃ¥det er et tvÃ¦rkommunalt samarbejde i Danmarks TrekantomrÃ¥de, der arbejder for at tiltrÃ¦kke virksomheder og talent samt styrke strategisk infrastruktur og forbindelser."
+      en: "Trekantområdet is a cross-municipal collaboration in the Triangle Region of Denmark, working to attract business and talent while strengthening strategic infrastructure and connectivity.",
+      de: "Trekantområdet ist eine kommunale Zusammenarbeit in der dänischen Triangle Region, die Unternehmen und Talente anzieht und strategische Infrastruktur sowie Vernetzung stärkt.",
+      da: "Trekantområdet er et tværkommunalt samarbejde i Danmarks Trekantområde, der arbejder for at tiltrække virksomheder og talent samt styrke strategisk infrastruktur og forbindelser."
     }
   },
   {
     id: 18,
     initials: "US",
-    name: "UdviklingsrÃ¥d SÃ¸nderjylland",
+    name: "Udviklingsråd Sønderjylland",
     role: {
       en: "Development Council",
       de: "Entwicklungsrat",
-      da: "UdviklingsrÃ¥d"
+      da: "Udviklingsråd"
     },
-    company: "UdviklingsrÃ¥d SÃ¸nderjylland",
+    company: "Udviklingsråd Sønderjylland",
     country: "DK",
     sector: "Public Sector",
     bio: {
-      en: "UdviklingsrÃ¥d SÃ¸nderjylland promotes the development of the Southern Jutland region with a particular focus on cross-border cooperation, bilingual communities, and shared German-Danish identity.",
-      de: "UdviklingsrÃ¥d SÃ¸nderjylland fÃ¶rdert die Entwicklung der Region SÃ¼djÃ¼tland mit besonderem Fokus auf grenzÃ¼berschreitende Zusammenarbeit, zweisprachige Gemeinschaften und gemeinsame deutsch-dÃ¤nische IdentitÃ¤t.",
-      da: "UdviklingsrÃ¥d SÃ¸nderjylland fremmer udviklingen af SÃ¸nderjylland med sÃ¦rligt fokus pÃ¥ grÃ¦nseoverskridende samarbejde, tosprogede fÃ¦llesskaber og fÃ¦lles dansk-tysk identitet."
+      en: "Udviklingsråd Sønderjylland promotes the development of the Southern Jutland region with a particular focus on cross-border cooperation, bilingual communities, and shared German-Danish identity.",
+      de: "Udviklingsråd Sønderjylland fördert die Entwicklung der Region Südjütland mit besonderem Fokus auf grenzüberschreitende Zusammenarbeit, zweisprachige Gemeinschaften und gemeinsame deutsch-dänische Identität.",
+      da: "Udviklingsråd Sønderjylland fremmer udviklingen af Sønderjylland med særligt fokus på grænseoverskridende samarbejde, tosprogede fællesskaber og fælles dansk-tysk identitet."
     }
   },
   {
     id: 19,
     initials: "UV",
-    name: "UdviklingsrÃ¥d Vejen",
+    name: "Udviklingsråd Vejen",
     role: {
       en: "Development Council",
       de: "Entwicklungsrat",
-      da: "UdviklingsrÃ¥d"
+      da: "Udviklingsråd"
     },
-    company: "UdviklingsrÃ¥d Vejen",
+    company: "Udviklingsråd Vejen",
     country: "DK",
     sector: "Government",
     bio: {
-      en: "UdviklingsrÃ¥d Vejen supports rural development and business growth in Vejen Municipality, facilitating connections between Danish and German agri-business communities.",
-      de: "UdviklingsrÃ¥d Vejen unterstÃ¼tzt lÃ¤ndliche Entwicklung und Unternehmenswachstum in der Kommune Vejen und fÃ¶rdert Verbindungen zwischen dÃ¤nischen und deutschen Agrarwirtschaftsakteuren.",
-      da: "UdviklingsrÃ¥d Vejen stÃ¸tter landdistriktsudvikling og erhvervsvÃ¦kst i Vejen Kommune og skaber forbindelser mellem danske og tyske landbrugsvirksomheder."
+      en: "Udviklingsråd Vejen supports rural development and business growth in Vejen Municipality, facilitating connections between Danish and German agri-business communities.",
+      de: "Udviklingsråd Vejen unterstützt ländliche Entwicklung und Unternehmenswachstum in der Kommune Vejen und fördert Verbindungen zwischen dänischen und deutschen Agrarwirtschaftsakteuren.",
+      da: "Udviklingsråd Vejen støtter landdistriktsudvikling og erhvervsvækst i Vejen Kommune og skaber forbindelser mellem danske og tyske landbrugsvirksomheder."
     }
   },
   {
     id: 20,
     initials: "UU",
-    name: "Unternehmensverband Unterelbe-WestkÃ¼ste",
+    name: "Unternehmensverband Unterelbe-Westküste",
     role: {
       en: "Business Association",
       de: "Unternehmensverband",
       da: "Erhvervsforening"
     },
-    company: "Unternehmensverband Unterelbe-WestkÃ¼ste e.V.",
+    company: "Unternehmensverband Unterelbe-Westküste e.V.",
     country: "DE",
     sector: "Government",
     bio: {
-      en: "The Unterelbe-WestkÃ¼ste business association represents companies along the Lower Elbe and West Coast of Schleswig-Holstein, advocating for cross-border economic interests.",
-      de: "Der Unternehmensverband Unterelbe-WestkÃ¼ste vertritt Unternehmen entlang der Unterelbe und der WestkÃ¼ste Schleswig-Holsteins und setzt sich fÃ¼r grenzÃ¼berschreitende Wirtschaftsinteressen ein.",
-      da: "Erhvervsforeningen Unterelbe-WestkÃ¼ste reprÃ¦senterer virksomheder langs Nedre Elben og vestkysten af Slesvig-Holsten og arbejder for grÃ¦nseoverskridende Ã¸konomiske interesser."
+      en: "The Unterelbe-Westküste business association represents companies along the Lower Elbe and West Coast of Schleswig-Holstein, advocating for cross-border economic interests.",
+      de: "Der Unternehmensverband Unterelbe-Westküste vertritt Unternehmen entlang der Unterelbe und der Westküste Schleswig-Holsteins und setzt sich für grenzüberschreitende Wirtschaftsinteressen ein.",
+      da: "Erhvervsforeningen Unterelbe-Westküste repræsenterer virksomheder langs Nedre Elben og vestkysten af Slesvig-Holsten og arbejder for grænseoverskridende økonomiske interesser."
     }
   },
   {
@@ -365,34 +365,34 @@ export const members = [
     name: "WFG Flensburg/Schleswig",
     role: {
       en: "Economic Development Agency",
-      de: "WirtschaftsfÃ¶rderungsgesellschaft",
+      de: "Wirtschaftsförderungsgesellschaft",
       da: "Erhvervsfremmeagentur"
     },
-    company: "WirtschaftsfÃ¶rderungs- und Regionalentwicklungsgesellschaft Flensburg/Schleswig",
+    company: "Wirtschaftsförderungs- und Regionalentwicklungsgesellschaft Flensburg/Schleswig",
     country: "DE",
     sector: "Government",
     bio: {
       en: "The economic development agency for Flensburg and Schleswig supports business settlement, expansion, and cross-border investment in one of the most active DE-DK cooperation zones.",
-      de: "Die WirtschaftsfÃ¶rderung fÃ¼r Flensburg und Schleswig unterstÃ¼tzt Unternehmensansiedlung, Expansion und grenzÃ¼berschreitende Investitionen in einer der aktivsten deutsch-dÃ¤nischen Kooperationszonen.",
-      da: "Erhvervsfremmeagenturet for Flensborg og Slesvig stÃ¸tter virksomhedsetablering, ekspansion og grÃ¦nseoverskridende investeringer i en af de mest aktive DE-DK-samarbejdszoner."
+      de: "Die Wirtschaftsförderung für Flensburg und Schleswig unterstützt Unternehmensansiedlung, Expansion und grenzüberschreitende Investitionen in einer der aktivsten deutsch-dänischen Kooperationszonen.",
+      da: "Erhvervsfremmeagenturet for Flensborg og Slesvig støtter virksomhedsetablering, ekspansion og grænseoverskridende investeringer i en af de mest aktive DE-DK-samarbejdszoner."
     }
   },
   {
     id: 22,
     initials: "WR",
-    name: "WFG Rendsburg-EckernfÃ¶rde",
+    name: "WFG Rendsburg-Eckernförde",
     role: {
       en: "Economic Development Agency",
-      de: "WirtschaftsfÃ¶rderungsgesellschaft",
+      de: "Wirtschaftsförderungsgesellschaft",
       da: "Erhvervsfremmeagentur"
     },
-    company: "WirtschaftsfÃ¶rderungsgesellschaft Rendsburg-EckernfÃ¶rde",
+    company: "Wirtschaftsförderungsgesellschaft Rendsburg-Eckernförde",
     country: "DE",
     sector: "Government",
     bio: {
-      en: "The economic development company for the Rendsburg-EckernfÃ¶rde district promotes business location, regional development, and international partnerships in central Schleswig-Holstein.",
-      de: "Die WirtschaftsfÃ¶rderungsgesellschaft fÃ¼r den Kreis Rendsburg-EckernfÃ¶rde fÃ¶rdert Unternehmensstandorte, Regionalentwicklung und internationale Partnerschaften im mittleren Schleswig-Holstein.",
-      da: "Erhvervsfremmeselskabet for Rendsburg-EckernfÃ¶rde fremmer erhvervslokationer, regional udvikling og internationale partnerskaber i det centrale Slesvig-Holsten."
+      en: "The economic development company for the Rendsburg-Eckernförde district promotes business location, regional development, and international partnerships in central Schleswig-Holstein.",
+      de: "Die Wirtschaftsförderungsgesellschaft für den Kreis Rendsburg-Eckernförde fördert Unternehmensstandorte, Regionalentwicklung und internationale Partnerschaften im mittleren Schleswig-Holstein.",
+      da: "Erhvervsfremmeselskabet for Rendsburg-Eckernförde fremmer erhvervslokationer, regional udvikling og internationale partnerskaber i det centrale Slesvig-Holsten."
     }
   },
   {
@@ -401,16 +401,16 @@ export const members = [
     name: "WFG Nordfriesland",
     role: {
       en: "Economic Development Agency",
-      de: "WirtschaftsfÃ¶rderungsgesellschaft",
+      de: "Wirtschaftsförderungsgesellschaft",
       da: "Erhvervsfremmeagentur"
     },
-    company: "WirtschaftsfÃ¶rderungsgesellschaft Nordfriesland mbH",
+    company: "Wirtschaftsförderungsgesellschaft Nordfriesland mbH",
     country: "DE",
     sector: "Government",
     bio: {
-      en: "Nordfriesland's economic development agency drives investment, tourism, and green energy projects in the North Frisian region â€” including the Wadden Sea coast and island communities.",
-      de: "Die WirtschaftsfÃ¶rderung Nordfriesland treibt Investitionen, Tourismus und Projekte im Bereich grÃ¼ne Energie in Nordfriesland voran â€“ einschlieÃŸlich WattenmeerkÃ¼ste und Inselgemeinden.",
-      da: "Nordfrieslands erhvervsfremmeagentur driver investeringer, turisme og grÃ¸nne energiprojekter i Nordfrisland â€“ inklusive Vadehavskysten og Ã¸samfundene."
+      en: "Nordfriesland's economic development agency drives investment, tourism, and green energy projects in the North Frisian region — including the Wadden Sea coast and island communities.",
+      de: "Die Wirtschaftsförderung Nordfriesland treibt Investitionen, Tourismus und Projekte im Bereich grüne Energie in Nordfriesland voran — einschließlich Wattenmeerküste und Inselgemeinden.",
+      da: "Nordfrieslands erhvervsfremmeagentur driver investeringer, turisme og grønne energiprojekter i Nordfrisland — inklusive Vadehavskysten og øsamfundene."
     }
   },
   {
@@ -427,8 +427,8 @@ export const members = [
     sector: "Government",
     bio: {
       en: "Wirtschaftsvereinigung Eutin represents local businesses in the Ostholstein district, promoting networking, regional commerce, and collaboration within the wider Baltic Sea business community.",
-      de: "Die Wirtschaftsvereinigung Eutin vertritt lokale Unternehmen im Kreis Ostholstein und fÃ¶rdert Networking, regionalen Handel und Zusammenarbeit in der weiteren Ostsee-Wirtschaftsgemeinschaft.",
-      da: "Wirtschaftsvereinigung Eutin reprÃ¦senterer lokale virksomheder i Ostholstein og fremmer netvÃ¦rk, regional handel og samarbejde i det bredere Ã˜stersÃ¸-erhvervsmiljÃ¸."
+      de: "Die Wirtschaftsvereinigung Eutin vertritt lokale Unternehmen im Kreis Ostholstein und fördert Networking, regionalen Handel und Zusammenarbeit in der weiteren Ostsee-Wirtschaftsgemeinschaft.",
+      da: "Wirtschaftsvereinigung Eutin repræsenterer lokale virksomheder i Ostholstein og fremmer netværk, regional handel og samarbejde i det bredere Østersø-erhvervsmiljø."
     }
   },
   {
@@ -438,15 +438,15 @@ export const members = [
     role: {
       en: "Relocation & Integration Service",
       de: "Relocation- und Integrationsservice",
-      da: "BosÃ¦tnings- og integrationsservice"
+      da: "Bosætnings- og integrationsservice"
     },
     company: "Work-live-stay",
     country: "DK",
     sector: "Public Sector",
     bio: {
       en: "Work-live-stay helps international workers and their families settle successfully in Southern Denmark, offering guidance on housing, language, schools, and community integration.",
-      de: "Work-live-stay hilft internationalen ArbeitskrÃ¤ften und ihren Familien, sich erfolgreich in SÃ¼ddÃ¤nemark einzuleben, und bietet Beratung zu Wohnen, Sprache, Schulen und Integration vor Ort.",
-      da: "Work-live-stay hjÃ¦lper internationale medarbejdere og deres familier med at falde godt til i Syddanmark og tilbyder vejledning om bolig, sprog, skole og lokalt fÃ¦llesskab."
+      de: "Work-live-stay hilft internationalen Arbeitskräften und ihren Familien, sich erfolgreich in Süddänemark einzuleben, und bietet Beratung zu Wohnen, Sprache, Schulen und Integration vor Ort.",
+      da: "Work-live-stay hjælper internationale medarbejdere og deres familier med at falde godt til i Syddanmark og tilbyder vejledning om bolig, sprog, skole og lokalt fællesskab."
     }
   },
   {
@@ -462,16 +462,16 @@ export const members = [
     country: "DK",
     sector: "Public Sector",
     bio: {
-      en: "Workindenmark South is the official service for international job seekers and employers in Southern Denmark, matching skilled workers from abroad â€” including Germany â€” with Danish companies.",
-      de: "Workindenmark South ist der offizielle Service fÃ¼r internationale Arbeitssuchende und Arbeitgeber in SÃ¼ddÃ¤nemark und bringt qualifizierte FachkrÃ¤fte aus dem Ausland â€“ auch aus Deutschland â€“ mit dÃ¤nischen Unternehmen zusammen.",
-      da: "Workindenmark South er den officielle service for internationale jobsÃ¸gende og arbejdsgivere i Syddanmark og matcher kvalificerede medarbejdere fra udlandet â€“ ogsÃ¥ Tyskland â€“ med danske virksomheder."
+      en: "Workindenmark South is the official service for international job seekers and employers in Southern Denmark, matching skilled workers from abroad — including Germany — with Danish companies.",
+      de: "Workindenmark South ist der offizielle Service für internationale Arbeitssuchende und Arbeitgeber in Süddänemark und bringt qualifizierte Fachkräfte aus dem Ausland — auch aus Deutschland — mit dänischen Unternehmen zusammen.",
+      da: "Workindenmark South er den officielle service for internationale jobsøgende og arbejdsgivere i Syddanmark og matcher kvalificerede medarbejdere fra udlandet — også Tyskland — med danske virksomheder."
     }
   }
-]
+];
 
 export const sectors = [
-  'All',
-  'Government',
-  'Public Sector',
-  'Education'
-]
+  "All",
+  "Government",
+  "Public Sector",
+  "Education"
+];
