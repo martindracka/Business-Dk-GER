@@ -2,9 +2,6 @@
   <div>
     <!-- Hero -->
     <section class="home-hero">
-      <video class="hero-video" autoplay loop muted playsinline>
-        <source src="/videos/bcvideo.mp4" type="video/mp4">
-      </video>
       <div class="hero-overlay"></div>
       <div class="container hero-content">
         <span class="hero-label anim-1">{{ t('home.hero_label') }}</span>
@@ -104,63 +101,6 @@
       </div>
     </section>
 
-    <!-- Featured Interview -->
-    <section class="section interview-section">
-      <div class="container">
-        <p class="section-label" v-reveal>{{ t('home.video_label') }}</p>
-        <div class="interview-showcase" v-reveal="60">
-          <!-- Short video with navigation -->
-          <div class="showcase-left">
-            <div class="showcase-frame">
-              <video :key="homeShortIdx" class="showcase-vid" autoplay muted loop playsinline>
-                <source :src="`/videos/short_${homeShortIdx + 1}.mp4`" type="video/mp4" />
-              </video>
-              <div class="showcase-nav">
-                <button class="snav-btn" @click="homeShortIdx = (homeShortIdx + 2) % 3">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
-                </button>
-                <div class="snav-dots">
-                  <span v-for="n in 3" :key="n" :class="['sndot', homeShortIdx === n - 1 ? 'active' : '']" @click.stop="homeShortIdx = n - 1"></span>
-                </div>
-                <button class="snav-btn" @click="homeShortIdx = (homeShortIdx + 1) % 3">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- Featured interview info -->
-          <div class="showcase-right">
-            <span class="interview-badge">{{ t('home.video_title') }}</span>
-            <h3 class="showcase-title">{{ featuredVideo.title }}</h3>
-            <p class="showcase-meta">{{ featuredVideo.author }} · {{ featuredVideo.company }}</p>
-            <div class="showcase-actions">
-              <button class="showcase-play-btn" @click="playFeatured">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                Watch now
-              </button>
-              <RouterLink to="/interviews" class="btn btn-outline-white">
-                {{ t('common.view_all') }} →
-              </RouterLink>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Video modal -->
-      <Transition name="modal">
-        <div v-if="activeVideo" class="modal-backdrop" @click.self="activeVideo = null">
-          <div class="modal-box">
-            <button class="modal-close" @click="activeVideo = null">✕</button>
-            <div class="video-wrap">
-              <iframe :src="`https://www.youtube.com/embed/${activeVideo.youtubeId}?autoplay=1`"
-                frameborder="0" allowfullscreen
-                allow="autoplay; encrypted-media"></iframe>
-            </div>
-          </div>
-        </div>
-      </Transition>
-    </section>
-
     <!-- Newsletter CTA -->
     <section class="section newsletter-cta">
       <div class="container newsletter-cta-inner">
@@ -175,32 +115,39 @@
         </form>
       </div>
     </section>
+
+    <!-- Quick Clips from the Field -->
+    <section class="section shorts-section">
+      <div class="container">
+        <p class="section-label" v-reveal>Quick Clips</p>
+        <h2 v-reveal="60">Quick Clips from the Field</h2>
+        <div class="shorts-grid">
+          <div class="short-card" v-for="n in 3" :key="n" v-reveal="(n-1) * 100">
+            <div class="short-frame">
+              <video class="short-vid" autoplay muted loop playsinline @error="handleVideoError">
+                <source :src="`/videos/short${n}.mp4`" type="video/mp4" />
+              </video>
+              <RouterLink :to="`/short${n}`" class="short-overlay">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </RouterLink>
+            </div>
+            <p class="short-title">Clip {{ n }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script setup>
-import { ref, watch, computed } from 'vue'
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
-import { videos } from '../data/videos.js'
 
-const { t, locale } = useI18n()
+const { t } = useI18n()
 const router = useRouter()
 const search = ref('')
 const newsletterEmail = ref('')
-const activeVideo = ref(null)
-const homeShortIdx = ref(0)
-
-const getFeaturedVideo = () => {
-  const video = videos[0]
-  return {
-    ...video,
-    title: typeof video.title === 'object' ? (video.title[locale.value] || video.title.en) : video.title,
-    author: typeof video.author === 'object' ? (video.author[locale.value] || video.author.en) : video.author
-  }
-}
-
-const featuredVideo = computed(() => getFeaturedVideo())
 
 const focusAreas = [
   { num: '01', titleKey: 'home.focus.data_title',        descKey: 'home.focus.data_desc' },
@@ -217,12 +164,12 @@ function goSearch() {
   }
 }
 
-function playFeatured() {
-  activeVideo.value = featuredVideo.value
-}
-
 function goNewsletter() {
   router.push({ path: '/newsletter', query: newsletterEmail.value ? { email: newsletterEmail.value } : {} })
+}
+
+function handleVideoError(e) {
+  console.error('Video load error:', e)
 }
 </script>
 
@@ -245,22 +192,17 @@ function goNewsletter() {
   position: relative;
   overflow: hidden;
 }
-.hero-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, rgba(13,22,40,0.80) 0%, rgba(13,22,40,0.70) 100%);
-  z-index: 1;
+  z-index: 0;
   pointer-events: none;
 }
+
 .hero-content { max-width: 680px; margin: 0 auto; position: relative; z-index: 2; }
+
 .hero-label {
   display: inline-block;
   font-size: 0.72rem;
@@ -273,6 +215,7 @@ function goNewsletter() {
   padding: 0.3rem 0.85rem;
   border-radius: var(--radius-pill);
 }
+
 .home-hero h1 {
   color: var(--white);
   font-size: clamp(2.4rem, 5vw, 4rem);
@@ -280,11 +223,13 @@ function goNewsletter() {
   line-height: 1.08;
   margin-bottom: 1.25rem;
 }
+
 .hero-sub {
   color: rgba(255,255,255,0.55);
   font-size: 1.05rem;
   margin-bottom: 2rem;
 }
+
 .hero-search {
   display: flex;
   align-items: center;
@@ -298,10 +243,12 @@ function goNewsletter() {
   color: rgba(255,255,255,0.45);
   transition: border-color 0.25s ease, background 0.25s ease;
 }
+
 .hero-search:focus-within {
   border-color: rgba(255,255,255,0.35);
   background: rgba(255,255,255,0.1);
 }
+
 .hero-search input {
   flex: 1;
   background: none;
@@ -310,7 +257,9 @@ function goNewsletter() {
   font-size: 0.92rem;
   color: var(--white);
 }
+
 .hero-search input::placeholder { color: rgba(255,255,255,0.4); }
+
 .hero-ctas {
   display: flex;
   gap: 0.75rem;
@@ -325,6 +274,7 @@ function goNewsletter() {
   gap: 1.25rem;
   margin-top: 1.5rem;
 }
+
 .offer-card {
   display: block;
   padding: 1.75rem 1.5rem;
@@ -335,11 +285,13 @@ function goNewsletter() {
   text-decoration: none;
   transition: box-shadow 0.3s ease, transform 0.3s ease, border-left-color 0.3s ease;
 }
+
 .offer-card:hover {
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);
   transform: translateY(-4px);
   border-left-color: #2563EB;
 }
+
 .offer-icon {
   width: 42px;
   height: 42px;
@@ -352,22 +304,26 @@ function goNewsletter() {
   margin-bottom: 1rem;
   transition: transform 0.3s ease;
 }
+
 .offer-card:hover .offer-icon { transform: scale(1.1) rotate(-5deg); }
 .offer-card h3 { color: var(--text); margin-bottom: 0.5rem; font-size: 1rem; }
 .offer-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
 
 /* ── Focus Areas ── */
 .focus-section { background: var(--grey-50); }
+
 .focus-sub {
   margin-top: 0.75rem;
   margin-bottom: 2.5rem;
   max-width: 560px;
 }
+
 .focus-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
 }
+
 .focus-item {
   display: flex;
   gap: 1rem;
@@ -377,153 +333,59 @@ function goNewsletter() {
   border-radius: var(--radius-md);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
 .focus-item:hover {
   box-shadow: 0 6px 24px rgba(0,0,0,0.08);
   transform: translateY(-3px);
 }
-.focus-num {
-  font-size: 0.78rem;
-  font-weight: 800;
-  color: var(--grey-300);
-  flex-shrink: 0;
-  margin-top: 0.1rem;
-  transition: color 0.25s ease;
-}
+
+.focus-num { font-size: 0.78rem; font-weight: 800; color: var(--grey-300); flex-shrink: 0; margin-top: 0.1rem; }
 .focus-item:hover .focus-num { color: var(--navy); }
 .focus-item h4 { font-size: 0.92rem; margin-bottom: 0.3rem; }
 .focus-item p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
 
-/* ── Featured Interview Showcase ── */
-.interview-section { background: var(--navy); }
-.interview-section .section-label { color: rgba(255,255,255,0.45); }
-.interview-showcase {
+/* ── Gallery Preview ── */
+.gallery-preview-section { background: var(--grey-50); }
+
+.gallery-preview-layout {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr 1.6fr;
   gap: 3.5rem;
   align-items: center;
-  margin-top: 1.75rem;
+  margin-top: 1.5rem;
 }
-.showcase-left { display: flex; justify-content: center; }
-.showcase-frame {
-  width: 260px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-.showcase-vid {
-  width: 100%;
-  aspect-ratio: 9/16;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
-  display: block;
-}
-.showcase-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-}
-.snav-btn {
-  width: 30px; height: 30px;
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.07);
-  color: rgba(255,255,255,0.65);
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease;
-}
-.snav-btn:hover { background: rgba(255,255,255,0.16); border-color: rgba(255,255,255,0.4); }
-.snav-dots { display: flex; gap: 0.35rem; }
-.sndot {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.25);
-  cursor: pointer;
-  transition: background 0.25s ease, transform 0.25s ease;
-}
-.sndot.active { background: rgba(255,255,255,0.9); transform: scale(1.35); }
-.showcase-right {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-}
-.interview-badge {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-}
-.showcase-title {
-  color: var(--white);
-  font-size: clamp(1.3rem, 2.5vw, 1.85rem);
-  line-height: 1.25;
-}
-.showcase-meta { font-size: 0.88rem; color: rgba(255,255,255,0.48); }
-.showcase-actions {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 0.5rem;
-}
-.showcase-play-btn {
-  display: inline-flex;
-  align-items: center;
+
+.gallery-preview-text h2 { margin-bottom: 1rem; }
+.gallery-preview-sub { font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; max-width: 340px; }
+.gallery-preview-cta { margin-top: 1.75rem; display: inline-flex; }
+
+.gallery-preview-mosaic {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  grid-template-rows: 200px 200px;
   gap: 0.5rem;
-  padding: 0.72rem 1.6rem;
-  background: var(--white);
-  color: var(--navy);
-  border: none;
-  border-radius: var(--radius-pill);
-  font-weight: 700;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
 }
-.showcase-play-btn:hover { background: var(--grey-100); transform: translateY(-2px); }
 
-/* Modal */
-.modal-backdrop {
-  position: fixed; inset: 0;
-  background: rgba(0,0,0,0.82);
-  z-index: 200;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
+.gp-tall {
+  grid-row: 1 / 3;
+  border-radius: var(--radius-md);
+  overflow: hidden;
 }
-.modal-box {
-  position: relative;
-  width: 100%;
-  max-width: 840px;
-}
-.modal-close {
-  position: absolute;
-  top: -2.5rem; right: 0;
-  background: none; border: none;
-  color: var(--white); font-size: 1.2rem;
-  cursor: pointer; opacity: 0.7;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-.modal-close:hover { opacity: 1; transform: scale(1.15); }
-.video-wrap { position: relative; padding-top: 56.25%; border-radius: var(--radius-md); overflow: hidden; }
-.video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
 
-/* Modal transition */
-.modal-enter-active { transition: opacity 0.25s ease; }
-.modal-leave-active { transition: opacity 0.2s ease; }
-.modal-enter-from, .modal-leave-to { opacity: 0; }
-.modal-enter-active .modal-box { animation: modalPop 0.3s ease both; }
-@keyframes modalPop {
-  from { transform: scale(0.94); opacity: 0; }
-  to   { transform: scale(1); opacity: 1; }
+.gp-tall img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; display: block; }
+.gp-tall:hover img { transform: scale(1.04); }
+
+.gp-thumb {
+  border-radius: var(--radius-md);
+  overflow: hidden;
 }
+
+.gp-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; display: block; }
+.gp-thumb:hover img { transform: scale(1.06); }
 
 /* ── Newsletter CTA ── */
 .newsletter-cta { background: var(--navy); }
+
 .newsletter-cta-inner {
   display: flex;
   align-items: center;
@@ -531,6 +393,7 @@ function goNewsletter() {
   gap: 2.5rem;
   flex-wrap: wrap;
 }
+
 .newsletter-text { flex: 1; min-width: 220px; }
 .newsletter-form {
   display: flex;
@@ -538,6 +401,7 @@ function goNewsletter() {
   flex-wrap: wrap;
   flex-shrink: 0;
 }
+
 .newsletter-form input {
   padding: 0.7rem 1.25rem;
   border-radius: var(--radius-pill);
@@ -549,79 +413,79 @@ function goNewsletter() {
   width: 240px;
   transition: border-color 0.25s ease, background 0.25s ease;
 }
+
 .newsletter-form input::placeholder { color: rgba(255,255,255,0.35); }
 .newsletter-form input:focus {
   border-color: rgba(255,255,255,0.5);
   background: rgba(255,255,255,0.1);
 }
+
 .newsletter-form .btn-dark {
   background: var(--white);
   color: var(--navy);
   border-color: var(--white);
 }
+
 .newsletter-form .btn-dark:hover { background: var(--grey-100); border-color: var(--grey-100); }
 
-/* ── Gallery Preview ── */
-.gallery-preview-section { background: var(--grey-50); }
-.gallery-preview-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.6fr;
-  gap: 3.5rem;
-  align-items: center;
-  margin-top: 1.5rem;
-}
-.gallery-preview-text h2 { margin-bottom: 1rem; }
-.gallery-preview-sub { font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; max-width: 340px; }
-.gallery-preview-cta { margin-top: 1.75rem; display: inline-flex; }
-.gallery-preview-mosaic {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr;
-  grid-template-rows: 200px 200px;
-  gap: 0.5rem;
-}
-.gp-tall {
-  grid-row: 1 / 3;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-}
-.gp-tall img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; display: block; }
-.gp-tall:hover img { transform: scale(1.04); }
-.gp-thumb {
-  border-radius: var(--radius-md);
-  overflow: hidden;
-}
-.gp-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; display: block; }
-.gp-thumb:hover img { transform: scale(1.06); }
+/* ── Shorts Section ── */
+.shorts-section { background: var(--white); }
 
-/* ── Responsive ── */
-@media (max-width: 900px) {
+.shorts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.short-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.short-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--navy);
+}
+
+.short-vid {
+  width: 100%;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+  display: block;
+}
+
+.short-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.short-card:hover .short-overlay {
+  opacity: 1;
+  background: rgba(0,0,0,0.5);
+}
+
+.short-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .shorts-grid { grid-template-columns: 1fr; }
+  .offer-grid { grid-template-columns: 1fr; }
   .focus-grid { grid-template-columns: repeat(2, 1fr); }
   .gallery-preview-layout { grid-template-columns: 1fr; }
-  .gallery-preview-sub { max-width: 100%; }
-}
-@media (max-width: 768px) {
-  .gallery-preview-mosaic {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 160px 160px 160px;
-  }
-  .gp-tall { grid-row: 1 / 2; grid-column: 1 / 3; }
-  .offer-grid { grid-template-columns: 1fr; }
-  .interview-showcase { grid-template-columns: 1fr; justify-items: center; gap: 2rem; }
-  .showcase-frame { width: 220px; }
-  .newsletter-cta-inner { flex-direction: column; align-items: flex-start; }
-  .newsletter-form { width: 100%; }
-  .newsletter-form input { width: 100%; flex: 1; min-width: 0; }
-}
-@media (max-width: 640px) {
-  .home-hero { padding: 4rem 0 3.5rem; }
-  .hero-search { max-width: 100%; }
-  .hero-label { font-size: 0.68rem; }
-  .focus-grid { grid-template-columns: 1fr; }
-  .interview-banner { flex-direction: column; align-items: flex-start; }
-  .newsletter-text h2 { font-size: clamp(1.3rem, 5vw, 1.6rem); }
-  .gallery-preview-mosaic {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 140px 140px 140px;
-  }
 }
 </style>
