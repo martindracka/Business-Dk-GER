@@ -176,7 +176,9 @@ function handleVideoError(e) {
 <style scoped>
 /* ── Hero entrance animations ── */
 .anim-1, .anim-2, .anim-3, .anim-4, .anim-5 {
-  animation: heroFadeUp 0.7s ease both;
+    display: flex;
+    animation: heroFadeUp 0.7s ease both;
+    align-items: center;
 }
 .anim-1 { animation-delay: 0.05s; }
 .anim-2 { animation-delay: 0.18s; }
